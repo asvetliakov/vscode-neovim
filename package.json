@@ -320,6 +320,10 @@
                 "title": "Neovim: History down cmdline"
             },
             {
+                "command": "vscode-neovim.paste-register-cmdline",
+                "title": "Neovim: Paste from register (cmdline)"
+            },
+            {
                 "command": "vscode-neovim.ctrl-b",
                 "title": "Neovim: ctrl-b"
             },
@@ -596,42 +600,42 @@
             {
                 "command": "vscode-neovim.history-up-cmdline",
                 "key": "up",
-                "when": "neovim.mode == cmdline_normal"
+                "when": "neovim.mode == cmdline_normal || neovim.mode == cmdline_insert || neovim.mode == cmdline_replace"
             },
             {
                 "command": "vscode-neovim.history-up-cmdline",
                 "key": "ctrl+p",
-                "when": "neovim.mode == cmdline_normal"
+                "when": "neovim.mode == cmdline_normal || neovim.mode == cmdline_insert || neovim.mode == cmdline_replace"
             },
             {
                 "command": "vscode-neovim.history-down-cmdline",
                 "key": "down",
-                "when": "neovim.mode == cmdline_normal"
+                "when": "neovim.mode == cmdline_normal || neovim.mode == cmdline_insert || neovim.mode == cmdline_replace"
             },
             {
                 "command": "vscode-neovim.history-down-cmdline",
                 "key": "ctrl+n",
-                "when": "neovim.mode == cmdline_normal"
+                "when": "neovim.mode == cmdline_normal || neovim.mode == cmdline_insert || neovim.mode == cmdline_replace"
             },
             {
                 "command": "vscode-neovim.delete-word-left-cmdline",
                 "key": "ctrl+w",
-                "when": "neovim.mode == cmdline_normal"
+                "when": "neovim.mode == cmdline_normal || neovim.mode == cmdline_insert || neovim.mode == cmdline_replace"
             },
             {
                 "command": "vscode-neovim.delete-all-cmdline",
                 "key": "ctrl+u",
-                "when": "neovim.mode == cmdline_normal"
+                "when": "neovim.mode == cmdline_normal || neovim.mode == cmdline_insert || neovim.mode == cmdline_replace"
             },
             {
                 "command": "vscode-neovim.delete-char-left-cmdline",
                 "key": "ctrl+h",
-                "when": "neovim.mode == cmdline_normal"
+                "when": "neovim.mode == cmdline_normal || neovim.mode == cmdline_insert || neovim.mode == cmdline_replace"
             },
             {
                 "command": "vscode-neovim.complete-selection-cmdline",
                 "key": "tab",
-                "when": "neovim.mode == cmdline_normal"
+                "when": "neovim.mode == cmdline_normal || neovim.mode == cmdline_insert || neovim.mode == cmdline_replace"
             },
             {
                 "command": "vscode-neovim.send",
@@ -672,13 +676,13 @@
             {
                 "command": "vscode-neovim.send",
                 "key": "tab",
-                "when": "editorTextFocus && neovim.init && neovim.mode != insert && neovim.mode != cmdline_normal",
+                "when": "editorTextFocus && neovim.init && neovim.mode != insert && neovim.mode != cmdline_normal && neovim.mode != cmdline_insert && neovim.mode != cmdline_replace",
                 "args": "<Tab>"
             },
             {
                 "command": "vscode-neovim.send",
                 "key": "shift+tab",
-                "when": "editorTextFocus && neovim.init && neovim.mode != insert && neovim.mode != cmdline_normal",
+                "when": "editorTextFocus && neovim.init && neovim.mode != insert && neovim.mode != cmdline_normal && neovim.mode != cmdline_insert && neovim.mode != cmdline_replace",
                 "args": "<S-Tab>"
             },
             {
